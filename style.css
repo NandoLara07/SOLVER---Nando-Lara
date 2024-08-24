@@ -1,0 +1,216 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header styles */
+header {
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+header img {
+    margin-right: 20px;
+    width: 100px;
+}
+
+header .title-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+header h1, header h3 {
+    color: #333333;
+    margin: 0;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header h3 {
+    font-size: 1.5em;
+    margin-top: 5px;
+}
+
+.login-button {
+    color: #333333;
+    background-color: transparent;
+    border: 2px solid #333333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    position: absolute;
+    right: 20px;
+}
+
+.login-button:hover {
+    background-color: #222222;
+    color: yellow;
+}
+
+/* Styles for login and create account pages */
+.cabecalho-login {
+    background-color: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.alinhar-login {
+    font-size: 2.5em;
+    color: #333333;
+    margin: 0;
+}
+
+/* Container and Form Styles for login and create account pages */
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px);
+    background-color: #f9f9f9;
+}
+
+.center-login {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-login {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #555555;
+}
+
+.link-container-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.n_a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.n_a:hover {
+    text-decoration: underline;
+}
+
+/* Error message styling */
+.error-message {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+/* Sales Section Styles */
+.sales {
+    padding: 20px;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.sales h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.scroll-container {
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.scroll-container .scrolling-images {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    scroll-behavior: smooth;
+    transition: transform 0.3s;
+}
+
+.product-item {
+    display: inline-block;
+    width: 350px; /* Aumenta a largura do container das imagens */
+    margin-right: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.product-item img {
+    width: 100%; /* Faz a imagem preencher a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+}
+
+.product-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333333;
+}
+
+/* Scroll Button Styles */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #333333;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.scroll-button:hover {
+    background-color: #f0f0f0;
+}
+
+.scroll-button.left {
+    left: 10px;
+}
+
+.scroll-button.right {
+    right: 10px;
+}

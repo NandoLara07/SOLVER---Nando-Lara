@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Criar Conta</title>
+    <link rel="icon" href="LOGO.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="cabecalho-login">
+        <h1 class="alinhar-login">CRIAR CONTA</h1>
+    </header>
+
+    <div class="container-login">
+        <div class="center-login">
+            <form action="" method="post" onsubmit="return handleCreateAccount()">
+                <label for="eml">E-mail:</label><br>
+                <input type="email" id="eml" class="input-login" required><br> 
+
+                <label for="name">Username:</label><br>
+                <input type="text" id="name" class="input-login" required><br>
+
+                <label for="password">Senha:</label><br>
+                <input type="password" id="password" class="input-login" required><br>
+                
+                <label for="confirm-password">Confirmar Senha:</label><br>
+                <input type="password" id="confirm-password" class="input-login" required><br><br>
+
+                <div id="error-message" class="error-message"></div><br>
+
+                <button type="submit" class="submit-button">Criar Conta</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleCreateAccount() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const errorMessage = document.getElementById('error-message');
+    
+            if (password !== confirmPassword) {
+                errorMessage.textContent = 'As senhas não coincidem. Por favor, tente novamente.';
+                errorMessage.style.color = 'red';
+                document.getElementById('confirm-password').value = ''; // Limpa o campo de confirmação de senha
+                return false;
+            }
+    
+            // Armazenar o e-mail e username do usuário no localStorage (se necessário)
+            const email = document.getElementById('eml').value;
+            const username = document.getElementById('name').value;
+            localStorage.setItem('email', email);
+            localStorage.setItem('username', username);
+    
+            // Redirecionar para a página inicial
+            window.location.href = "index.html";
+            return false;
+        }
+    </script>
+    
+</body>
+</html>
